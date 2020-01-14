@@ -50,11 +50,9 @@ function custom_add_theme_support() {
  */
 
 function theme_enqueue_scripts() {
-   wp_enqueue_style('bootstrap-css', get_template_directory_uri() . '/css/bootstrap.min.css');
    wp_enqueue_style('font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css');
-   wp_enqueue_style('app-style', get_stylesheet_directory_uri() . '/css/theme-styles.css', '', filemtime(get_stylesheet_directory() . '/css/theme-styles.css'));   
-   wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '1.0.0', true);   
-   wp_register_script("app-script", get_stylesheet_directory_uri() . '/js/theme-script.js', array('jquery'), filemtime(get_stylesheet_directory() . '/js/theme-script.js'), true);
+   wp_enqueue_style('app-style', get_stylesheet_directory_uri() . '/css/theme-styles.css', '', filemtime(get_stylesheet_directory() . '/css/theme-styles.css'));     
+   wp_register_script("app-script", get_stylesheet_directory_uri() . '/js/app.js', array('jquery'), filemtime(get_stylesheet_directory() . '/js/app.js'), true);
    wp_localize_script('app-script', 'myAjax', array('ajaxurl' => admin_url('admin-ajax.php')));
    wp_enqueue_script('app-script'); 
 }

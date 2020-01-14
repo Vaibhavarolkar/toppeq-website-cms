@@ -15,8 +15,39 @@
 	</head>
 	<body <?php body_class(); ?>>
 			
-	<div class="site-header">
-	
-	</div>
+	<header id="site-header">
+		<div class="container-fluid">
+			<div class="navbar navbar-expand-md navbar-light bg-light p-0">
+				<div class="logo">
+					<a href="#" class="d-inline-block text-decoration-none">
+						<!-- <h2 class="m-0">TOPPEQ</h2> -->
+						<img src="<?php echo get_template_directory_uri(); ?>/images/Logo_White.png" class="normal-logo">
+						<img src="<?php echo get_template_directory_uri(); ?>/images/Logo_Black.png" class="sticky-logo">
+					</a>
+				</div>
+				<div class="hamburger-menu">
+					<div class="bar1"></div>
+					<div class="bar2"></div>
+					<div class="bar3"></div>
+				</div>         
+			</div>
+		</div>
+	</header>
+	<nav>
+		<div class="site-menu">
+			<ul class="navbar-nav mt-3 mt-md-0">
+				<li class="nav-item active">
+					<a class="nav-link" href="#">Why TOPPEQ?</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Team</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Contact Us</a>
+				</li>
+			</ul>
+			<button class="btn-reset menu-close-btn f-35">X</button>
+		</div>
+	</nav>
 	
 	<div class="site-wrapper">
